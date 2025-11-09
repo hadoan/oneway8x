@@ -37,9 +37,10 @@ const Navbar = () => {
             ))}
             <Button 
               size="sm"
-              onClick={() => window.location.href = 'mailto:ha@oneway8x.com'}
+              asChild
+              className="cursor-pointer"
             >
-              Contact
+              <a href="mailto:ha@oneway8x.com">Contact</a>
             </Button>
           </div>
 
@@ -68,12 +69,9 @@ const Navbar = () => {
             <Button 
               size="sm" 
               className="w-full"
-              onClick={() => {
-                window.location.href = 'mailto:ha@oneway8x.com';
-                setIsOpen(false);
-              }}
+              asChild
             >
-              Contact
+              <a href="mailto:ha@oneway8x.com">Contact</a>
             </Button>
           </div>
         )}
