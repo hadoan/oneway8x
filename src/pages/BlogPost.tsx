@@ -109,21 +109,21 @@ const BlogPost = () => {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-24 pb-16">
+      <main className="min-h-screen pt-20 md:pt-24 pb-12 md:pb-16">
         <article className="container mx-auto px-4 max-w-4xl">
           <Link to="/">
-            <Button variant="ghost" className="mb-8">
+            <Button variant="ghost" className="mb-6 md:mb-8 -ml-2 md:-ml-4">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Button>
           </Link>
 
-          <header className="mb-8">
-            <h1 className="mb-4">{post.title}</h1>
+          <header className="mb-6 md:mb-8">
+            <h1 className="mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{post.title}</h1>
             
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
+            <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">
               <div className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
+                <Calendar className="h-3 w-3 md:h-4 md:w-4" />
                 <span>
                   {new Date(post.date).toLocaleDateString("en-US", {
                     month: "long",
@@ -133,13 +133,13 @@ const BlogPost = () => {
                 </span>
               </div>
               <div className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
+                <Clock className="h-3 w-3 md:h-4 md:w-4" />
                 <span>{post.readTime}</span>
               </div>
               <span>By {post.author}</span>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 md:gap-2">
               {post.tags.map((tag) => (
                 <Badge key={tag} variant="secondary">
                   {tag}
@@ -148,7 +148,7 @@ const BlogPost = () => {
             </div>
           </header>
 
-          <div className="markdown-content prose prose-lg max-w-none">
+          <div className="markdown-content prose prose-sm sm:prose lg:prose-lg max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {post.content}
             </ReactMarkdown>

@@ -109,46 +109,46 @@ const BlogSection = () => {
   }
 
   return (
-    <section className="py-20 px-4" id="blog">
+    <section className="py-12 md:py-20 px-4" id="blog">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="mb-4">My Blog</h2>
-          <p className="text-lg text-muted-foreground">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="mb-3 md:mb-4 text-3xl md:text-4xl">My Blog</h2>
+          <p className="text-base md:text-lg text-muted-foreground">
             Insights on development, DevOps, and cloud technologies
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
           {currentPosts.map((post) => (
             <Card 
               key={post.slug}
               onClick={() => navigate(`/blog/${post.slug}`)}
               className="h-full group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
-                <CardHeader>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      <span>{new Date(post.date).toLocaleDateString("en-US", { 
-                        month: "short", 
-                        day: "numeric",
-                        year: "numeric"
-                      })}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{post.readTime}</span>
-                    </div>
+              <CardHeader>
+                <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm text-muted-foreground mb-2">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="h-3 w-3 md:h-4 md:w-4" />
+                    <span>{new Date(post.date).toLocaleDateString("en-US", { 
+                      month: "short", 
+                      day: "numeric",
+                      year: "numeric"
+                    })}</span>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
-                    {post.title}
-                  </CardTitle>
-                  <CardDescription className="line-clamp-3 mt-2">
-                    {post.excerpt}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3 md:h-4 md:w-4" />
+                    <span>{post.readTime}</span>
+                  </div>
+                </div>
+                <CardTitle className="text-lg md:text-xl group-hover:text-primary transition-colors line-clamp-2">
+                  {post.title}
+                </CardTitle>
+                <CardDescription className="line-clamp-3 mt-2 text-sm">
+                  {post.excerpt}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                     {post.tags.slice(0, 3).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
@@ -166,12 +166,13 @@ const BlogSection = () => {
         </div>
 
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-2 flex-wrap">
             <Button
               variant="outline"
               size="icon"
               onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
               disabled={currentPage === 1}
+              className="h-9 w-9 md:h-10 md:w-10"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -183,7 +184,7 @@ const BlogSection = () => {
                   variant={currentPage === page ? "default" : "outline"}
                   size="icon"
                   onClick={() => setCurrentPage(page)}
-                  className="w-10"
+                  className="h-9 w-9 md:h-10 md:w-10"
                 >
                   {page}
                 </Button>
@@ -195,6 +196,7 @@ const BlogSection = () => {
               size="icon"
               onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
               disabled={currentPage === totalPages}
+              className="h-9 w-9 md:h-10 md:w-10"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
