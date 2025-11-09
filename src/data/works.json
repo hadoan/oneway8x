@@ -1,0 +1,79 @@
+[
+  {
+    "id": "quik-day",
+    "title": "Quik.day",
+    "description": "Governed command console for email, calendar, tasks, and social. Plan & Diff → Approve → Undo. Kill tab-switching. Ship work.",
+    "image": "/placeholder.svg",
+    "tags": ["NestJS", "React", "LangGraph", "OpenAI", "BullMQ"],
+    "category": "Open Source",
+    "employees": null,
+    "status": "active",
+    "url": "https://quik.day"
+  },
+  {
+    "id": "jobpiloteer",
+    "title": "JobPiloteer",
+    "description": "AI-powered job application automation: thousands of tailored applications in hours, with you reviewing and approving responses. Transparent premium pricing with a full-delivery guarantee.",
+    "image": "/placeholder.svg",
+    "tags": ["NextJS", "OpenAI", "Automation"],
+    "category": "Side Hustle, Indie",
+    "employees": "10 employees",
+    "status": "active",
+    "url": null
+  },
+  {
+    "id": "quill-social",
+    "title": "Quill Social",
+    "description": "AI Assistant for Managing Unlimited Campaigns Across All Social Media Platforms",
+    "image": "/placeholder.svg",
+    "tags": ["NextJS", "Prisma", "OpenAI"],
+    "category": "Side Hustle, Indie",
+    "employees": null,
+    "status": "active",
+    "url": null
+  },
+  {
+    "id": "vendex",
+    "title": "Vendex.io",
+    "description": "Vendex's software, featuring a fully customizable workflow and robust API ecosystem, seamlessly integrates with any IoT device and enterprise software, elevating your customer interactions to new standards.",
+    "image": "/placeholder.svg",
+    "tags": [".NET", "React", "Angular"],
+    "category": "Startup",
+    "employees": null,
+    "status": "active",
+    "url": "https://vendex.io"
+  },
+  {
+    "id": "forma",
+    "title": "Forma",
+    "description": "No-code platform that aims to empower non-technical individuals to build dynamic & customised workflows for any business process.",
+    "image": "/placeholder.svg",
+    "tags": [".NET", "Angular", "RabbitMQ"],
+    "category": "Antler",
+    "employees": null,
+    "status": "closed",
+    "url": null
+  },
+  {
+    "id": "sqly-ai",
+    "title": "Sqly.ai",
+    "description": "Query any database in English",
+    "image": "/placeholder.svg",
+    "tags": [".NET", "OpenAI"],
+    "category": "Side Hustle, Indie",
+    "employees": null,
+    "status": "closed",
+    "url": null
+  },
+  {
+    "id": "vooy-studio",
+    "title": "Vooy Studio",
+    "description": "Building MVP for startups",
+    "image": "/placeholder.svg",
+    "tags": ["Software Agency"],
+    "category": "Bootstrapped",
+    "employees": null,
+    "status": "active",
+    "url": null
+  }
+]

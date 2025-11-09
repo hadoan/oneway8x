@@ -1,0 +1,66 @@
+[
+  {
+    "id": "pillio",
+    "name": "Pillio",
+    "logo": "/placeholder.svg",
+    "description": "Build a MVP for Pillio's smart medication plan.",
+    "tags": [".NET", "K8s", "Angular"],
+    "url": "https://pillio.de"
+  },
+  {
+    "id": "workramen",
+    "name": "WorkRamen",
+    "logo": "/placeholder.svg",
+    "description": "A all-in-one tool for scheduling, secure sharing, and instant e-signatures",
+    "tags": ["NextJS", "Prisma", "PostgreSQL", "React"],
+    "url": "https://workramen.com"
+  },
+  {
+    "id": "contentful",
+    "name": "Contentful",
+    "logo": "/placeholder.svg",
+    "description": "A NextJS, Prisma project",
+    "tags": ["NextJS", "Prisma", "PostgreSQL", "React"],
+    "url": "https://contentful.com"
+  },
+  {
+    "id": "tapline",
+    "name": "Tapline",
+    "logo": "/placeholder.svg",
+    "description": "Financing for SaaS and recurring revenue businesses",
+    "tags": ["NextJS", "Prisma", "PostgreSQL", "NestJS"],
+    "url": "https://tapline.io"
+  },
+  {
+    "id": "therapy-app",
+    "name": "Well-being Therapy App",
+    "logo": "/placeholder.svg",
+    "description": "200k+ users | A comprehensive well-being online therapy and self-care app designed to support you throughout your mental health journey.",
+    "tags": ["Flutter", ".NET", "Angular", "NextJS", "iOS", "Android", "K8s", "AWS"],
+    "url": null
+  },
+  {
+    "id": "haulio",
+    "name": "Haulio",
+    "logo": "/placeholder.svg",
+    "description": "Connecting global trade to local first-mile transportation across ASEAN",
+    "tags": [".NET", "Angular", "Azure", "RabbitMQ", "Python"],
+    "url": "https://haulio.io"
+  },
+  {
+    "id": "smart-vending",
+    "name": "Smart Vending & Automation",
+    "logo": "/placeholder.svg",
+    "description": "Smart Vending & Automation startup",
+    "tags": ["IoT", "Hardware", ".NET", "WPF", "Angular", "jQuery", "RabbitMQ"],
+    "url": null
+  },
+  {
+    "id": "vendex-infrastructure",
+    "name": "Vendex",
+    "logo": "/placeholder.svg",
+    "description": "Infrastructure for the next generation of shopping- and service points",
+    "tags": ["IoT", "Hardware", ".NET", "MAUI", "Angular", "RabbitMQ"],
+    "url": "https://vendex.io"
+  }
+]
