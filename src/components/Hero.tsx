@@ -33,6 +33,21 @@ const Hero = () => {
             and a variety of technologies including C#, Node.js, Next.js, React.js, Angular, microservices, and Docker.
           </p>
           
+          {/* Free Consultation Banner */}
+          <div className="mb-8 p-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-2 border-primary/30 rounded-xl backdrop-blur-sm">
+            <p className="text-lg font-semibold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              🎁 Limited Time Offer
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-elegant hover:shadow-xl transition-all duration-300 group"
+              onClick={() => window.location.href = 'mailto:ha@oneway8x.com?subject=Free%2030%20minutes%20tech%20consultant'}
+            >
+              Get Free 30 Minutes Tech Consultation
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
