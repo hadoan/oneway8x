@@ -5,7 +5,8 @@
     "logo": "/placeholder.svg",
     "description": "Build a MVP for Pillio's smart medication plan.",
     "tags": [".NET", "K8s", "Angular"],
-    "url": "https://pillio.de"
+    "url": "https://pillio.de",
+    "country": "Germany"
   },
   {
     "id": "workramen",
@@ -13,7 +14,8 @@
     "logo": "/placeholder.svg",
     "description": "A all-in-one tool for scheduling, secure sharing, and instant e-signatures",
     "tags": ["NextJS", "Prisma", "PostgreSQL", "React"],
-    "url": "https://workramen.com"
+    "url": "https://workramen.com",
+    "country": "Singapore"
   },
   {
     "id": "contentful",
@@ -21,7 +23,8 @@
     "logo": "/placeholder.svg",
     "description": "A NextJS, Prisma project",
     "tags": ["NextJS", "Prisma", "PostgreSQL", "React"],
-    "url": "https://contentful.com"
+    "url": "https://contentful.com",
+    "country": "Germany"
   },
   {
     "id": "tapline",
@@ -29,7 +32,8 @@
     "logo": "/placeholder.svg",
     "description": "Financing for SaaS and recurring revenue businesses",
     "tags": ["NextJS", "Prisma", "PostgreSQL", "NestJS"],
-    "url": "https://tapline.io"
+    "url": "https://tapline.io",
+    "country": "Germany"
   },
   {
     "id": "therapy-app",
@@ -37,7 +41,8 @@
     "logo": "/placeholder.svg",
     "description": "200k+ users | A comprehensive well-being online therapy and self-care app designed to support you throughout your mental health journey.",
     "tags": ["Flutter", ".NET", "Angular", "NextJS", "iOS", "Android", "K8s", "AWS"],
-    "url": null
+    "url": null,
+    "country": "Singapore"
   },
   {
     "id": "haulio",
@@ -45,7 +50,8 @@
     "logo": "/placeholder.svg",
     "description": "Connecting global trade to local first-mile transportation across ASEAN",
     "tags": [".NET", "Angular", "Azure", "RabbitMQ", "Python"],
-    "url": "https://haulio.io"
+    "url": "https://haulio.io",
+    "country": "Singapore"
   },
   {
     "id": "smart-vending",
@@ -53,7 +59,8 @@
     "logo": "/placeholder.svg",
     "description": "Smart Vending & Automation startup",
     "tags": ["IoT", "Hardware", ".NET", "WPF", "Angular", "jQuery", "RabbitMQ"],
-    "url": null
+    "url": null,
+    "country": "Singapore"
   },
   {
     "id": "vendex-infrastructure",
@@ -61,6 +68,7 @@
     "logo": "/placeholder.svg",
     "description": "Infrastructure for the next generation of shopping- and service points",
     "tags": ["IoT", "Hardware", ".NET", "MAUI", "Angular", "RabbitMQ"],
-    "url": "https://vendex.io"
+    "url": "https://vendex.io",
+    "country": "Singapore"
   }
 ]

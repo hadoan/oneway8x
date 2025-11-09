@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import clientsData from "@/data/clients.json";
 
 const ClientsSection = () => {
@@ -20,9 +20,15 @@ const ClientsSection = () => {
             >
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                    {client.name}
-                  </CardTitle>
+                  <div className="flex-1">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors mb-2">
+                      {client.name}
+                    </CardTitle>
+                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                      <MapPin className="h-4 w-4" />
+                      <span>{client.country}</span>
+                    </div>
+                  </div>
                   {client.url && (
                     <a 
                       href={client.url} 
@@ -34,7 +40,7 @@ const ClientsSection = () => {
                     </a>
                   )}
                 </div>
-                <CardDescription className="line-clamp-3">
+                <CardDescription className="line-clamp-3 mt-2">
                   {client.description}
                 </CardDescription>
               </CardHeader>
