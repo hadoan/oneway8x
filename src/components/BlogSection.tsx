@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ChevronLeft, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 interface BlogPost {
   slug: string;
@@ -18,6 +18,7 @@ interface BlogPost {
 const POSTS_PER_PAGE = 20;
 
 const BlogSection = () => {
+  const navigate = useNavigate();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -119,8 +120,11 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {currentPosts.map((post) => (
-            <Link key={post.slug} to={`/blog/${post.slug}`}>
-              <Card className="h-full group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+            <Card 
+              key={post.slug}
+              onClick={() => navigate(`/blog/${post.slug}`)}
+              className="h-full group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+            >
                 <CardHeader>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
                     <div className="flex items-center gap-1">
@@ -158,7 +162,6 @@ const BlogSection = () => {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
           ))}
         </div>
 
