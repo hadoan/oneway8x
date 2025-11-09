@@ -38,34 +38,39 @@ const Hero = () => {
             <p className="text-lg font-semibold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               🎁 Limited Time Offer
             </p>
-            <a href="mailto:ha@oneway8x.com?subject=Free 30 minutes tech consultant">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-elegant hover:shadow-xl transition-all duration-300 group"
-              >
+            <Button 
+              size="lg" 
+              asChild
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-elegant hover:shadow-xl transition-all duration-300 group"
+            >
+              <a href="mailto:ha@oneway8x.com?subject=Free 30 minutes tech consultant">
                 Get Free 30 Minutes Tech Consultation
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              size="lg" 
+              size="lg"
+              asChild
               className="group shadow-elegant hover:shadow-xl transition-all duration-300"
-              onClick={() => window.location.href = 'mailto:ha@oneway8x.com'}
             >
-              Contact Now
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <a href="mailto:ha@oneway8x.com">
+                Contact Now
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
+              asChild
               className="group border-2 hover:border-primary/50"
-              onClick={() => window.open('https://app.workramen.com/hadoan-xyz/30min?duration=30', '_blank')}
             >
-              <Calendar className="mr-2 h-4 w-4" />
-              Book A Meeting
+              <a href="https://app.workramen.com/hadoan-xyz/30min?duration=30" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-4 w-4" />
+                Book A Meeting
+              </a>
             </Button>
           </div>
           
