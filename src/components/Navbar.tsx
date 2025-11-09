@@ -35,7 +35,12 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button size="sm">Contact</Button>
+            <Button 
+              size="sm"
+              onClick={() => window.location.href = 'mailto:ha@oneway8x.com'}
+            >
+              Contact
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -60,7 +65,16 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button size="sm" className="w-full">Contact</Button>
+            <Button 
+              size="sm" 
+              className="w-full"
+              onClick={() => {
+                window.location.href = 'mailto:ha@oneway8x.com';
+                setIsOpen(false);
+              }}
+            >
+              Contact
+            </Button>
           </div>
         )}
       </div>
