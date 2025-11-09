@@ -38,14 +38,15 @@ const Hero = () => {
             <p className="text-lg font-semibold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               🎁 Limited Time Offer
             </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-elegant hover:shadow-xl transition-all duration-300 group"
-              onClick={() => window.location.href = 'mailto:ha@oneway8x.com?subject=Free%2030%20minutes%20tech%20consultant'}
-            >
-              Get Free 30 Minutes Tech Consultation
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="mailto:ha@oneway8x.com?subject=Free 30 minutes tech consultant">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-elegant hover:shadow-xl transition-all duration-300 group"
+              >
+                Get Free 30 Minutes Tech Consultation
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
