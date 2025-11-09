@@ -19,9 +19,9 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">HA</span>
+              <span className="text-primary-foreground font-bold text-sm">OW</span>
             </div>
-            <span className="font-bold text-lg">hadoan.xyz</span>
+            <span className="font-bold text-lg">oneway8x.com</span>
           </a>
 
           {/* Desktop Navigation */}

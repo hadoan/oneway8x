@@ -37,6 +37,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="group shadow-elegant hover:shadow-xl transition-all duration-300"
+              onClick={() => window.location.href = 'mailto:ha@oneway8x.com'}
             >
               Contact Now
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -45,6 +46,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="group border-2 hover:border-primary/50"
+              onClick={() => window.open('https://app.workramen.com/hadoan-xyz/30min?duration=30', '_blank')}
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book A Meeting
@@ -54,7 +56,7 @@ const Hero = () => {
           <div className="mt-12 pt-8 border-t border-border/50">
             <p className="text-sm text-muted-foreground mb-4">Tech Stacks</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["React", "Node.js", "TypeScript", "Docker", "K8s", "AWS", "Next.js", "Angular", ".NET", "PostgreSQL"].map((tech) => (
+              {["React", "Node.js", "TypeScript", "Docker", "K8s", "AWS", "Next.js", "Angular", ".NET", "PostgreSQL", "Python", "FastAPI", "NestJS", "LangChain", "LangGraph", "Pinecone"].map((tech) => (
                 <span 
                   key={tech}
                   className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-primary/50 transition-colors cursor-default"

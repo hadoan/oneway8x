@@ -5,13 +5,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">HA</span>
+              <span className="text-primary-foreground font-bold text-sm">OW</span>
             </div>
-            <span className="font-bold">hadoan.xyz</span>
+            <span className="font-bold">oneway8x.com</span>
           </div>
           
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} hadoan.xyz. All Rights Reserved.
+            © {new Date().getFullYear()} oneway8x.com. All Rights Reserved.
           </p>
         </div>
       </div>
