@@ -19,14 +19,19 @@ const ClientsSection = () => {
               className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader>
-                <div className="flex items-start justify-between mb-2">
+                <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
                     <CardTitle className="text-xl group-hover:text-primary transition-colors mb-2">
                       {client.name}
                     </CardTitle>
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      <span>{client.country}</span>
+                    <div className="flex flex-col gap-2">
+                      <Badge variant="secondary" className="w-fit">
+                        {client.position}
+                      </Badge>
+                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                        <MapPin className="h-4 w-4" />
+                        <span>{client.country}</span>
+                      </div>
                     </div>
                   </div>
                   {client.url && (
