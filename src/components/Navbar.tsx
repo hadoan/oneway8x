@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -35,14 +34,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <button
-              onClick={() => {
-                window.location.href = "mailto:ha@oneway8x.com";
-              }}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 cursor-pointer"
-            >
-              Contact
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,15 +58,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <button
-              onClick={() => {
-                window.location.href = "mailto:ha@oneway8x.com";
-                setIsOpen(false);
-              }}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 w-full cursor-pointer"
-            >
-              Contact
-            </button>
           </div>
         )}
       </div>

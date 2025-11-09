@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -38,35 +37,14 @@ const Hero = () => {
             <p className="text-base md:text-lg font-semibold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               🎁 Limited Time Offer
             </p>
-            <button
-              onClick={() => {
-                window.location.href = "mailto:ha@oneway8x.com?subject=Free%2030%20minutes%20tech%20consultant";
-              }}
+            <a
+              href="https://app.workramen.com/hadoan-xyz/30min?duration=30"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-elegant hover:shadow-xl h-11 px-8 w-full sm:w-auto group cursor-pointer"
             >
               Get Free 30 Minutes Tech Consultation
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4 relative z-20">
-            <button
-              onClick={() => {
-                window.location.href = "mailto:ha@oneway8x.com";
-              }}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 shadow-elegant hover:shadow-xl h-11 px-8 w-full sm:w-auto group cursor-pointer"
-            >
-              Contact Now
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <a 
-              href="https://app.workramen.com/hadoan-xyz/30min?duration=30" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-2 border-input bg-background hover:bg-accent hover:text-accent-foreground hover:border-primary/50 h-11 px-8 w-full sm:w-auto group"
-            >
-              <Calendar className="mr-2 h-4 w-4" />
-              Book A Meeting
             </a>
           </div>
           
