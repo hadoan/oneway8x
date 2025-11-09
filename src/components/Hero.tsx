@@ -3,7 +3,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20 md:py-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-24 pb-20 md:pt-32 md:pb-24">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5 pointer-events-none" />
       
@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-primary/20 rounded-full blur-3xl animate-float pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-accent/20 rounded-full blur-3xl animate-float pointer-events-none" style={{ animationDelay: "1s" }} />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <div className="inline-block mb-4 px-3 py-1.5 md:px-4 md:py-2 bg-primary/10 rounded-full">
             <span className="text-xs md:text-sm font-medium text-primary">
