@@ -4,7 +4,7 @@ date: "2025-11-12"
 author: "Ha Doan"
 excerpt: "Learn how to stream data from a NestJS backend to a React frontend using Server-Sent Events (SSE) and newline-delimited JSON (NDJSON). Includes production tips and proxy configs."
 tags: ["NestJS", "React", "SSE", "NDJSON", "Streaming", "HTTP", "DevOps"]
-image: "/placeholder.svg"
+image: "/ess-react.png"
 ---
 
 # Streaming in NestJS and React: SSE & NDJSON the Easy Way
