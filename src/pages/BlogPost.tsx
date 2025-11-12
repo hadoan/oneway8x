@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,7 @@ interface PostData {
   tags: string[];
   content: string;
   readTime: string;
+  image?: string;
 }
 
 const BlogPost = () => {
@@ -43,6 +45,7 @@ const BlogPost = () => {
         tags: frontmatter.tags || [],
         content: markdownContent,
         readTime: calculateReadTime(markdownContent),
+        image: frontmatter.image || "",
       });
       setLoading(false);
     } catch (error) {
@@ -106,8 +109,71 @@ const BlogPost = () => {
     );
   }
 
+  const siteUrl = "https://oneway8x.com";
+  const postUrl = `${siteUrl}/blog/${slug}`;
+  const imageUrl = post.image ? `${siteUrl}${post.image}` : `${siteUrl}/placeholder.svg`;
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": imageUrl,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": siteUrl
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Ha Doan",
+      "url": siteUrl
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl
+    },
+    "keywords": post.tags.join(", ")
+  };
+
   return (
     <>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>{post.title} | Ha Doan</title>
+        <meta name="title" content={post.title} />
+        <meta name="description" content={post.excerpt} />
+        <meta name="author" content={post.author} />
+        <meta name="keywords" content={post.tags.join(", ")} />
+        <link rel="canonical" href={postUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={postUrl} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+        {post.tags.map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={postUrl} />
+        <meta property="twitter:title" content={post.title} />
+        <meta property="twitter:description" content={post.excerpt} />
+        <meta property="twitter:image" content={imageUrl} />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+
       <Navbar />
       <main className="min-h-screen pt-20 md:pt-24 pb-12 md:pb-16">
         <article className="container mx-auto px-4 max-w-4xl">
@@ -124,31 +190,42 @@ const BlogPost = () => {
             <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">
               <div className="flex items-center gap-1">
                 <Calendar className="h-3 w-3 md:h-4 md:w-4" />
-                <span>
+                <time dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString("en-US", {
                     month: "long",
                     day: "numeric",
                     year: "numeric",
                   })}
-                </span>
+                </time>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="h-3 w-3 md:h-4 md:w-4" />
                 <span>{post.readTime}</span>
               </div>
-              <span>By {post.author}</span>
+              <span>By <span itemProp="author">{post.author}</span></span>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 md:gap-2">
+            <div className="flex flex-wrap gap-1.5 md:gap-2 mb-6">
               {post.tags.map((tag) => (
                 <Badge key={tag} variant="secondary">
                   {tag}
                 </Badge>
               ))}
             </div>
+
+            {post.image && (
+              <div className="mb-8 rounded-lg overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-auto object-cover"
+                  loading="eager"
+                />
+              </div>
+            )}
           </header>
 
-          <div className="markdown-content prose prose-sm sm:prose lg:prose-lg max-w-none">
+          <div className="markdown-content prose prose-sm sm:prose lg:prose-lg max-w-none" itemProp="articleBody">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {post.content}
             </ReactMarkdown>
