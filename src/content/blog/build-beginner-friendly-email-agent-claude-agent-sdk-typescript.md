@@ -523,3 +523,5 @@ From here, the path to a production-grade email copilot is:
 - Wrap it in a UI your users love
 
 Happy building — and enjoy offloading your inbox to an AI agent. 🚀
+
+source code: https://github.com/hadoan/letscode/tree/main/anthropic-agent-sdk
