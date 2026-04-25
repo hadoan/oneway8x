@@ -11,6 +11,17 @@
     "url": "https://quik.day"
   },
   {
+    "id": "talelingo",
+    "title": "TaleLingo",
+    "description": "Story-based language learning app for Vietnamese speakers learning German. Read short stories, listen to audio, tap words for contextual meanings, practice grammar, and review saved vocabulary with spaced repetition.",
+    "image": "/talelingo-logo.png",
+    "tags": ["React Native", "Expo", "NestJS", "OpenAI", "RevenueCat"],
+    "category": "Mobile App, Indie",
+    "employees": null,
+    "status": "active",
+    "url": null
+  },
+  {
     "id": "jobpiloteer",
     "title": "JobPiloteer",
     "description": "AI-powered job application automation: thousands of tailored applications in hours, with you reviewing and approving responses. Transparent premium pricing with a full-delivery guarantee.",

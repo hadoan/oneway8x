@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
@@ -42,9 +43,19 @@ const Footer = () => {
             </a>
           </div>
           
-          <p className="text-xs md:text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} oneway8x.com. All Rights Reserved.
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-3 text-xs md:text-sm text-muted-foreground">
+              <Link to="/talelingo/privacy" className="hover:text-primary transition-colors">
+                Privacy
+              </Link>
+              <Link to="/talelingo/terms" className="hover:text-primary transition-colors">
+                Terms
+              </Link>
+            </div>
+            <p className="text-xs md:text-sm text-muted-foreground text-center">
+              © {new Date().getFullYear()} oneway8x.com. All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
