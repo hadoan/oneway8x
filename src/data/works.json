@@ -1,5 +1,15 @@
 [
   {
+    "id": "launchsprint",
+    "title": "LaunchSprint",
+    "role": "Founder / Builder",
+    "status": "Active",
+    "description": "LaunchSprint turns one product profile into recommended launch places, channel-specific drafts, risk checks, manual submission tracking, launch content plans, and reusable launch memory.",
+    "tags": ["Next.js", "React", "TypeScript"],
+    "category": "SaaS",
+    "url": "https://launchsprint.app"
+  },
+  {
     "id": "quik-day",
     "title": "Quik.day",
     "role": "Founder / Builder",
@@ -17,7 +27,7 @@
     "description": "Story-based German learning app for Vietnamese speakers, combining short stories, audio, contextual vocabulary, and grammar practice.",
     "tags": ["React Native", "Expo", "NestJS", "OpenAI", "RevenueCat"],
     "category": "Mobile App",
-    "url": null
+    "url": "https://www.talelingo.com/"
   },
   {
     "id": "jobpiloteer",
