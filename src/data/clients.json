@@ -1,19 +1,28 @@
 [
   {
+    "id": "sennder",
+    "name": "sennder",
+    "role": "Freelancer",
+    "location": "Berlin, Germany",
+    "description": "Built an AI copilot and gamification app for truckers.",
+    "tags": ["Vercel AI SDK", "NestJS", "React", "Prisma"],
+    "url": "https://sennder.com"
+  },
+  {
     "id": "therapy-app",
     "name": "Heyy / Well-being Therapy App",
     "role": "CTO",
     "location": "Singapore",
-    "description": "Led architecture and scaling of an AI-powered mental wellbeing app to 200k+ users, across mobile, backend, cloud, and AI-assisted conversational experiences.",
+    "description": "Worked as CTO on an AI-powered mental wellbeing app and helped scale it to 200k+ users, across mobile, backend, cloud, and AI-assisted conversational experiences.",
     "tags": ["Flutter", ".NET", "AWS", "Kubernetes", "iOS", "Android"],
     "url": null
   },
   {
     "id": "pillio",
     "name": "Pillio",
-    "role": "Software Engineer / CTO-level contributor",
+    "role": "Software Engineer",
     "location": "Germany",
-    "description": "Built healthcare SaaS features for smart medication planning, using cloud-native architecture and modern product engineering practices.",
+    "description": "Worked on healthcare SaaS features for smart medication planning, using .NET, Angular, Kubernetes, and cloud-native architecture.",
     "tags": [".NET", "Kubernetes", "Angular"],
     "url": "https://pillio.de"
   },
@@ -31,7 +40,7 @@
     "name": "Contentful",
     "role": "Freelancer",
     "location": "Germany",
-    "description": "Delivered Next.js and Prisma engineering work for a modern web application project.",
+    "description": "Contributed Next.js and Prisma engineering work for a modern web application project.",
     "tags": ["Next.js", "Prisma", "PostgreSQL", "React"],
     "url": "https://contentful.com"
   },

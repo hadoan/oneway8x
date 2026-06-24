@@ -18,12 +18,13 @@ const Hero = () => {
             </span>
           </div>
           
-          <h1 className="mb-4 md:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-            I build AI products and<br className="hidden md:block" /> scalable software systems.
+          <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+            I help build AI products <br className="hidden md:inline" />
+            <span className="bg-gradient-to-r from-primary/90 to-primary/50 bg-clip-text text-transparent">and scalable software systems.</span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
-            I’m Ha Doan, a Berlin-based founder-engineer and former CTO. I help startups and teams turn ideas into working products — from MVP to production.
+          <p className="mx-auto max-w-[700px] text-lg sm:text-xl text-muted-foreground mb-10 leading-relaxed font-light">
+            I’m Ha Doan, a Berlin-based software engineer, founder, and former CTO. I work with founders and teams to turn early ideas into useful software — from MVPs to production systems.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -63,17 +64,17 @@ const Hero = () => {
           </div>
 
           {/* Credibility Row */}
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground font-medium">
+          <p className="text-sm font-medium text-muted-foreground flex flex-wrap justify-center items-center gap-x-2 gap-y-1">
             <span>Former CTO</span>
-            <span className="hidden sm:inline">•</span>
-            <span>AI product builder</span>
-            <span className="hidden sm:inline">•</span>
+            <span className="text-primary/40 px-1">•</span>
+            <span>AI product experience</span>
+            <span className="text-primary/40 px-1">•</span>
             <span>Berlin-based</span>
-            <span className="hidden sm:inline">•</span>
-            <span>200k+ users scaled</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Europe & Asia startup experience</span>
-          </div>
+            <span className="text-primary/40 px-1">•</span>
+            <span>Helped scale a product to 200k+ users</span>
+            <span className="text-primary/40 px-1">•</span>
+            <span>Startup experience across Europe and Asia</span>
+          </p>
         </div>
       </div>
     </section>

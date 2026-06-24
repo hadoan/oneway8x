@@ -110,7 +110,7 @@ const BlogSection = () => {
         <div className="text-center mb-8 md:mb-12">
           <h2 className="mb-3 md:mb-4 text-3xl md:text-4xl font-bold tracking-tight">Writing</h2>
           <p className="text-base md:text-lg text-muted-foreground">
-            Practical notes on AI agents, product engineering, cloud, and startup systems.
+            Notes and tutorials on AI agents, product engineering, cloud, and startup systems.
           </p>
         </div>
 

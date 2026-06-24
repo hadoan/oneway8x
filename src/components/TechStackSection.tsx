@@ -6,17 +6,17 @@ const TechStackSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 px-4 bg-background">
+    <section className="py-8 md:py-12 px-4 bg-background">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-3">Tools I use to ship</h2>
+        <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-3">Tools I often use</h2>
         <p className="text-base md:text-lg text-muted-foreground mb-8">
-          A practical stack for building modern AI products, SaaS MVPs, and cloud systems.
+          A practical stack I use for AI products, SaaS MVPs, and cloud systems.
         </p>
         <div className="flex flex-wrap justify-center gap-2 md:gap-3">
           {technologies.map((tech) => (
             <span 
               key={tech}
-              className="px-4 py-2 bg-muted/50 border border-border/50 rounded-lg text-sm font-medium hover:border-primary/30 hover:bg-muted transition-all cursor-default text-muted-foreground hover:text-foreground"
+              className="px-4 py-2 bg-transparent border border-border/30 rounded-lg text-sm font-medium hover:border-primary/20 hover:bg-muted/30 transition-all cursor-default text-muted-foreground"
             >
               {tech}
             </span>

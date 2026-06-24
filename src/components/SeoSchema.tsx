@@ -13,8 +13,8 @@ const SeoSchema = () => {
       "addressCountry": "Germany"
     },
     "sameAs": [
-      "https://linkedin.com/in/oneway8x",
-      "https://github.com/oneway8x"
+      "https://www.linkedin.com/in/doanmanhha/",
+      "https://github.com/hadoan"
     ]
   };
 

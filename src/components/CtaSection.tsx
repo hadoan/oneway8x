@@ -9,10 +9,10 @@ const CtaSection = () => {
       
       <div className="container mx-auto max-w-3xl text-center relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">
-          Building something ambitious?
+          Working on an early product?
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-          If you’re working on an AI product, SaaS MVP, or complex software system, I’m happy to exchange ideas and see if I can help.
+          If you’re working on an AI product, SaaS MVP, or software system, I’m happy to exchange ideas and see if I can help.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

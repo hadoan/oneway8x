@@ -5,7 +5,7 @@ const ServicesSection = () => {
   const services = [
     {
       title: "AI MVP Studio",
-      description: "For founders who want to turn an AI idea into a working MVP in weeks.",
+      description: "For founders who want help turning an AI idea into a focused first version.",
       cta: "Visit AI MVP Studio",
       url: "https://ai-mvp.oneway8x.com",
       icon: Terminal,
@@ -14,7 +14,7 @@ const ServicesSection = () => {
     },
     {
       title: "Fractional CTO / Architecture",
-      description: "For startups that need senior technical direction, architecture review, roadmap planning, or team guidance.",
+      description: "For startups that need help with technical direction, architecture decisions, roadmap planning, or team guidance.",
       cta: "Discuss your product",
       url: "https://app.workramen.com/hadoan-xyz/30min?duration=30",
       icon: Server,
@@ -23,7 +23,7 @@ const ServicesSection = () => {
     },
     {
       title: "Product Engineering",
-      description: "For teams that need hands-on senior delivery across frontend, backend, cloud, AI, and integrations.",
+      description: "For teams that need hands-on help across frontend, backend, cloud, AI features, and integrations.",
       cta: "Start a project",
       url: "https://app.workramen.com/hadoan-xyz/30min?duration=30",
       icon: Code2,
@@ -38,7 +38,7 @@ const ServicesSection = () => {
         <div className="text-center mb-10 md:mb-16">
           <h2 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight">Ways to work with me</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            I work with founders and teams who need both product thinking and hands-on engineering.
+            I usually work with small teams and founders who need help shaping, building, or improving a product.
           </p>
         </div>
         

@@ -4,11 +4,11 @@ const FaqSection = () => {
   const faqs = [
     {
       question: "Who is Ha Doan?",
-      answer: "Ha Doan is a Berlin-based founder-engineer, former CTO, and AI product builder."
+      answer: "Ha Doan is a Berlin-based software engineer, founder, and former CTO working on AI products, SaaS MVPs, and cloud systems."
     },
     {
       question: "What does Oneway8X do?",
-      answer: "Oneway8X is Ha Doan’s personal studio for AI products, SaaS MVPs, cloud systems, and founder-focused engineering work."
+      answer: "Oneway8X is Ha’s personal studio for product engineering, AI MVPs, cloud systems, and technical advisory work."
     },
     {
       question: "Can Ha help build an AI MVP?",

@@ -2,10 +2,10 @@ import { CheckCircle2 } from "lucide-react";
 
 const AboutSection = () => {
   const bullets = [
-    "Former CTO at Heyy, an AI-powered mental wellbeing startup",
+    "Former CTO at Heyy, a mental wellbeing startup",
     "Helped scale a wellbeing app to 200k+ users",
     "Built SaaS, mobile, automation, and cloud systems across Europe and Asia",
-    "Based in Berlin, working with teams across Europe"
+    "Based in Berlin, working with founders and small teams across Europe"
   ];
 
   return (
@@ -16,16 +16,19 @@ const AboutSection = () => {
             <h2 className="mb-6 text-3xl md:text-4xl font-bold tracking-tight">About Ha</h2>
             <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                I’m a Berlin-based software engineer, founder, and former CTO with experience building products from zero to scale. I’ve worked across AI products, SaaS, healthcare, logistics, mental wellbeing, cloud architecture, and mobile apps.
+                I’m a Berlin-based software engineer, founder, and former CTO. Over the years, I’ve worked on products across AI, SaaS, healthcare, logistics, mental wellbeing, cloud systems, and mobile apps.
               </p>
               <p>
-                I like working with founders and teams who need both product thinking and hands-on engineering. My focus is simple: build the right first version, ship fast, and keep the architecture practical enough to grow.
+                I enjoy working close to the product: understanding the problem, simplifying the first version, and building software that can actually be used by real people.
+              </p>
+              <p>
+                I’m especially interested in early-stage products, practical AI features, and helping small teams make good technical decisions without overbuilding.
               </p>
             </div>
           </div>
           
           <div className="bg-card p-6 md:p-8 rounded-2xl border border-border shadow-sm">
-            <h3 className="font-semibold text-lg mb-4 text-foreground">Fast Facts</h3>
+            <h3 className="font-semibold text-lg mb-4 text-foreground">A few things I’ve worked on</h3>
             <ul className="space-y-4">
               {bullets.map((bullet, index) => (
                 <li key={index} className="flex items-start gap-3">

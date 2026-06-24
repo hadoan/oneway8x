@@ -9,65 +9,58 @@ const ClientsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="mb-3 md:mb-4 text-3xl md:text-4xl font-bold tracking-tight">Selected Client & CTO Work</h2>
-          <p className="text-base md:text-lg text-muted-foreground">Startup, freelance, and architecture work across Europe and Asia.</p>
+          <p className="text-base md:text-lg text-muted-foreground">Some startup, freelance, and architecture work across Europe and Asia.</p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {clientsData.map((client) => (
-            <Card 
+            <div 
               key={client.id}
-              className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
+              className="p-6 border border-border/50 rounded-xl group flex flex-col h-full hover:border-primary/20 transition-colors bg-card/20"
             >
-               <CardHeader>
-                 <div className="flex items-start justify-between mb-3">
-                   <div className="flex-1">
-                     <CardTitle className="text-lg md:text-xl group-hover:text-primary transition-colors mb-1">
-                       {client.name}
-                     </CardTitle>
-                     {client.role && (
-                       <p className="text-sm font-medium text-primary mb-2">
-                         {client.role}
-                       </p>
-                     )}
-                     <div className="flex flex-col gap-2">
-                       {client.position && !client.role && (
-                         <Badge variant="secondary" className="w-fit text-xs">
-                           {client.position}
-                         </Badge>
-                       )}
-                       {client.location && (
-                         <div className="flex items-center gap-1 text-xs md:text-sm text-muted-foreground">
-                           <MapPin className="h-3 w-3 md:h-4 md:w-4" />
-                           <span>{client.location}</span>
-                         </div>
-                       )}
-                     </div>
-                   </div>
-                   {client.url && (
-                     <a 
-                       href={client.url} 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       className="ml-2 text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
-                     >
-                       <ExternalLink className="h-4 w-4 md:h-5 md:w-5" />
-                     </a>
-                   )}
-                 </div>
-                 <CardDescription className="line-clamp-3 mt-2 text-sm">
-                   {client.description}
-                 </CardDescription>
-               </CardHeader>
-               <CardContent>
-                 <div className="flex flex-wrap gap-1.5 md:gap-2">
-                  {client.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
+              <div className="flex flex-col gap-2 mb-4">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-lg font-bold flex items-center gap-2 group-hover:text-primary transition-colors leading-tight">
+                    {client.url ? (
+                      <a href={client.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:underline">
+                        {client.name}
+                        <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
+                      </a>
+                    ) : (
+                      client.name
+                    )}
+                  </h3>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex flex-col gap-1.5 mt-1">
+                  {client.role && (
+                    <span className="text-sm font-medium text-primary">{client.role}</span>
+                  )}
+                  {client.position && !client.role && (
+                    <Badge variant="secondary" className="w-fit text-[11px] font-normal">
+                      {client.position}
+                    </Badge>
+                  )}
+                  {client.location && (
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-0.5">
+                      <MapPin className="h-3.5 w-3.5" />
+                      <span>{client.location}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+              
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed flex-grow">
+                {client.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-1.5 mt-auto">
+                {client.tags.map((tag) => (
+                  <span key={tag} className="text-[11px] text-muted-foreground bg-muted/50 border border-border/50 px-2 py-0.5 rounded-md">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>

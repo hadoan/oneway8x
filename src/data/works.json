@@ -43,8 +43,8 @@
     "id": "vendex",
     "title": "Vendex.io",
     "role": "Founder / CTO",
-    "status": "Startup",
-    "description": "Workflow and API platform for vending, IoT, and enterprise software integrations.",
+    "status": "Previous Startup",
+    "description": "A platform experiment around vending, IoT, and enterprise software workflows.",
     "tags": [".NET", "React", "Angular"],
     "category": "Platform",
     "url": "https://vendex.io"
@@ -54,7 +54,7 @@
     "title": "Forma",
     "role": "Co-founder / CTO",
     "status": "Previous Startup",
-    "description": "No-code workflow platform built to help non-technical teams create custom business processes.",
+    "description": "A no-code workflow platform for helping non-technical teams create custom business processes.",
     "tags": [".NET", "Angular", "RabbitMQ"],
     "category": "Platform",
     "url": null

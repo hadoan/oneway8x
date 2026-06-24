@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,15 +53,21 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/oneway8x" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/doanmanhha/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                   <Linkedin className="h-4 w-4" />
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/oneway8x" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+                <a href="https://github.com/hadoan" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                   <Github className="h-4 w-4" />
                   GitHub
+                </a>
+              </li>
+              <li>
+                <a href="mailto:ha@oneway8x.com" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  ha@oneway8x.com
                 </a>
               </li>
             </ul>
