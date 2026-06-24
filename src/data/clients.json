@@ -1,82 +1,56 @@
 [
   {
+    "id": "therapy-app",
+    "name": "Heyy / Well-being Therapy App",
+    "role": "CTO",
+    "location": "Singapore",
+    "description": "Led architecture and scaling of an AI-powered mental wellbeing app to 200k+ users, across mobile, backend, cloud, and AI-assisted conversational experiences.",
+    "tags": ["Flutter", ".NET", "AWS", "Kubernetes", "iOS", "Android"],
+    "url": null
+  },
+  {
     "id": "pillio",
     "name": "Pillio",
-    "logo": "/placeholder.svg",
-    "description": "Build a MVP for Pillio's smart medication plan.",
-    "tags": [".NET", "K8s", "Angular"],
-    "url": "https://pillio.de",
-    "country": "Germany",
-    "position": "CTO"
+    "role": "Software Engineer / CTO-level contributor",
+    "location": "Germany",
+    "description": "Built healthcare SaaS features for smart medication planning, using cloud-native architecture and modern product engineering practices.",
+    "tags": [".NET", "Kubernetes", "Angular"],
+    "url": "https://pillio.de"
   },
   {
     "id": "workramen",
     "name": "WorkRamen",
-    "logo": "/placeholder.svg",
-    "description": "A all-in-one tool for scheduling, secure sharing, and instant e-signatures",
-    "tags": ["NextJS", "Prisma", "PostgreSQL", "React"],
-    "url": "https://workramen.com",
-    "country": "Singapore",
-    "position": "Freelancer"
+    "role": "Freelancer",
+    "location": "Berlin / Remote",
+    "description": "Built scheduling, secure sharing, and e-signature workflows for a modern productivity product.",
+    "tags": ["Next.js", "Prisma", "PostgreSQL", "React"],
+    "url": "https://workramen.com"
   },
   {
     "id": "contentful",
     "name": "Contentful",
-    "logo": "/placeholder.svg",
-    "description": "A NextJS, Prisma project",
-    "tags": ["NextJS", "Prisma", "PostgreSQL", "React"],
-    "url": "https://contentful.com",
-    "country": "Germany",
-    "position": "Freelancer"
-  },
-  {
-    "id": "tapline",
-    "name": "Tapline",
-    "logo": "/placeholder.svg",
-    "description": "Financing for SaaS and recurring revenue businesses",
-    "tags": ["NextJS", "Prisma", "PostgreSQL", "NestJS"],
-    "url": "https://tapline.io",
-    "country": "Germany",
-    "position": "Freelancer"
-  },
-  {
-    "id": "therapy-app",
-    "name": "Well-being Therapy App",
-    "logo": "/placeholder.svg",
-    "description": "200k+ users | A comprehensive well-being online therapy and self-care app designed to support you throughout your mental health journey.",
-    "tags": ["Flutter", ".NET", "Angular", "NextJS", "iOS", "Android", "K8s", "AWS"],
-    "url": null,
-    "country": "Singapore",
-    "position": "CTO"
+    "role": "Freelancer",
+    "location": "Germany",
+    "description": "Delivered Next.js and Prisma engineering work for a modern web application project.",
+    "tags": ["Next.js", "Prisma", "PostgreSQL", "React"],
+    "url": "https://contentful.com"
   },
   {
     "id": "haulio",
     "name": "Haulio",
-    "logo": "/placeholder.svg",
-    "description": "Connecting global trade to local first-mile transportation across ASEAN",
+    "role": "Solution Architect",
+    "location": "Singapore",
+    "description": "Worked on software architecture for logistics and transportation workflows across ASEAN.",
     "tags": [".NET", "Angular", "Azure", "RabbitMQ", "Python"],
-    "url": "https://haulio.io",
-    "country": "Singapore",
-    "position": "Solution Architect"
+    "url": "https://haulio.io"
   },
   {
-    "id": "smart-vending",
-    "name": "Smart Vending & Automation",
-    "logo": "/placeholder.svg",
-    "description": "Smart Vending & Automation startup",
-    "tags": ["IoT", "Hardware", ".NET", "WPF", "Angular", "jQuery", "RabbitMQ"],
-    "url": null,
-    "country": "Singapore",
-    "position": "Head of Engineering"
-  },
-  {
-    "id": "vendex-infrastructure",
-    "name": "Vendex",
-    "logo": "/placeholder.svg",
-    "description": "Infrastructure for the next generation of shopping- and service points",
-    "tags": ["IoT", "Hardware", ".NET", "MAUI", "Angular", "RabbitMQ"],
-    "url": "https://vendex.io",
-    "country": "Singapore",
-    "position": "CTO"
+    "id": "tapline",
+    "name": "Tapline",
+    "role": "Freelancer",
+    "location": "Germany",
+    "description": "Worked on SaaS financing and recurring revenue product workflows.",
+    "tags": ["Next.js", "Prisma", "PostgreSQL", "NestJS"],
+    "url": "https://tapline.io"
   }
 ]

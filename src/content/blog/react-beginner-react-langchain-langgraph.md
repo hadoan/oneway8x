@@ -9,14 +9,19 @@ image: "/react.png"
 
 # Build a Beginner-Friendly ReAct Agent in TypeScript with Claude, LangChain, and LangGraph
 
-LLMs that **only chat** are nice.  
-LLMs that **think, use tools, and act in your system** are powerful.
+When I architect complex products, I often find that LLMs that **only chat** are nice, but LLMs that **think, use tools, and act in your system** are truly powerful.
 
 In this guide, you’ll build a **beginner-friendly ReAct (Reason + Act) agent** in **TypeScript**, and see how the same idea maps to:
 
 - A minimal custom loop
 - **LangChain.js** tools
 - **LangGraph** for orchestration
+
+### Key Takeaways
+- **ReAct (Reason + Act)** is a fundamental prompt engineering pattern where an agent thinks about its next step, acts using a tool, observes the result, and loops until it can provide a final answer.
+- **Custom Loops** are great for understanding the theory, but you should use frameworks like LangGraph for production to handle state management and error recovery.
+- **LangChain.js** simplifies tool creation by providing standardized schemas (via Zod) and built-in tool-calling support for Claude and OpenAI.
+- **LangGraph** models your agent as a state machine graph, allowing for multi-step reasoning, branching, and human-in-the-loop approvals.
 
 We’ll keep it focused and practical:
 
@@ -29,7 +34,7 @@ By the end, you’ll have a clear mental model of ReAct and a working foundation
 
 ---
 
-## What We’re Going to Build
+## What will we build with LangChain and LangGraph?
 
 We’ll build a small Node/TypeScript app that:
 
@@ -58,7 +63,7 @@ The model will:
 
 ---
 
-## Prerequisites
+## What do you need before getting started?
 
 To follow along, you’ll need:
 
@@ -79,7 +84,7 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 
 ---
 
-## Project Setup
+## How do you set up the TypeScript project?
 
 First, create a new project:
 
@@ -612,3 +617,14 @@ Once you’re comfortable with this pattern, you can reuse it everywhere:
 - Internal dev tools that read & write to your systems
 
 Happy hacking — and enjoy building agents that don’t just talk, but actually **do things**. 🚀
+
+## Quick Answers
+
+### What is the ReAct prompting framework?
+ReAct (Reason + Act) is a popular prompting technique where an AI model is instructed to output its internal "Thought" before outputting an "Action" (a tool call). This forces the model to plan its next move, resulting in much higher accuracy and fewer hallucinated tool arguments.
+
+### Should I use LangChain or just write a custom loop?
+For learning, writing a custom ReAct loop is the best way to understand how agents work under the hood. However, for production applications, you should use LangChain and LangGraph because they handle edge cases, state persistence, structured tool definitions, and retry logic automatically.
+
+### What is LangGraph?
+LangGraph is an orchestration library built on top of LangChain. It allows you to define your agent workflows as graphs (state machines) with nodes and edges. This makes it easy to build complex agents that involve branching logic, loops, and human-in-the-loop approvals.

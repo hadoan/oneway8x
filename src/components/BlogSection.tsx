@@ -15,12 +15,11 @@ interface BlogPost {
   readTime: string;
 }
 
-const POSTS_PER_PAGE = 20;
+// Removed POSTS_PER_PAGE constant as we only show 3 on homepage
 
 const BlogSection = () => {
   const navigate = useNavigate();
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -30,7 +29,7 @@ const BlogSection = () => {
   const loadBlogPosts = async () => {
     try {
       // Import all markdown files from the blog content directory
-      const modules = import.meta.glob("/src/content/blog/*.md", { as: "raw" });
+      const modules = import.meta.glob("/src/content/blog/*.md", { query: "?raw", import: "default" });
       const posts: BlogPost[] = [];
 
       for (const path in modules) {
@@ -60,11 +59,11 @@ const BlogSection = () => {
   };
 
   const parseFrontmatter = (content: string) => {
-    const match = content.match(/^---\n([\s\S]*?)\n---/);
+    const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!match) return {};
 
     const frontmatter: any = {};
-    const lines = match[1].split("\n");
+    const lines = match[1].split(/\r?\n/);
 
     lines.forEach((line) => {
       const [key, ...valueParts] = line.split(":");
@@ -93,10 +92,7 @@ const BlogSection = () => {
     return `${minutes} min read`;
   };
 
-  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const endIndex = startIndex + POSTS_PER_PAGE;
-  const currentPosts = posts.slice(startIndex, endIndex);
+  const currentPosts = posts.slice(0, 3);
 
   if (loading) {
     return (
@@ -112,9 +108,9 @@ const BlogSection = () => {
     <section className="py-12 md:py-20 px-4" id="blog">
       <div className="container mx-auto">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="mb-3 md:mb-4 text-3xl md:text-4xl">My Blog</h2>
+          <h2 className="mb-3 md:mb-4 text-3xl md:text-4xl font-bold tracking-tight">Writing</h2>
           <p className="text-base md:text-lg text-muted-foreground">
-            Insights on development, DevOps, and cloud technologies
+            Practical notes on AI agents, product engineering, cloud, and startup systems.
           </p>
         </div>
 
@@ -165,40 +161,15 @@ const BlogSection = () => {
           ))}
         </div>
 
-        {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 flex-wrap">
+        {posts.length > 3 && (
+          <div className="flex justify-center mt-8 md:mt-10">
             <Button
               variant="outline"
-              size="icon"
-              onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
-              disabled={currentPage === 1}
-              className="h-9 w-9 md:h-10 md:w-10"
+              size="lg"
+              onClick={() => navigate('/writing')}
+              className="px-8"
             >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            
-            <div className="flex items-center gap-1">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <Button
-                  key={page}
-                  variant={currentPage === page ? "default" : "outline"}
-                  size="icon"
-                  onClick={() => setCurrentPage(page)}
-                  className="h-9 w-9 md:h-10 md:w-10"
-                >
-                  {page}
-                </Button>
-              ))}
-            </div>
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
-              disabled={currentPage === totalPages}
-              className="h-9 w-9 md:h-10 md:w-10"
-            >
-              <ChevronRight className="h-4 w-4" />
+              View all writing
             </Button>
           </div>
         )}

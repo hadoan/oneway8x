@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import BlogPost from "./pages/BlogPost";
 import TaleLingoPrivacy from "./pages/TaleLingoPrivacy";
 import TaleLingoTerms from "./pages/TaleLingoTerms";
+import WritingList from "./pages/WritingList";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/talelingo/privacy" element={<TaleLingoPrivacy />} />
           <Route path="/talelingo/terms" element={<TaleLingoTerms />} />
+          <Route path="/writing" element={<WritingList />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

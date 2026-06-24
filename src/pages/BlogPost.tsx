@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GiscusComments from "@/components/GiscusComments";
 
 interface PostData {
   title: string;
@@ -35,7 +36,7 @@ const BlogPost = () => {
       const content = response.default;
       
       const frontmatter = parseFrontmatter(content);
-      const markdownContent = content.replace(/^---\n[\s\S]*?\n---\n/, "");
+      const markdownContent = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
       
       setPost({
         title: frontmatter.title || "Untitled",
@@ -55,11 +56,11 @@ const BlogPost = () => {
   };
 
   const parseFrontmatter = (content: string) => {
-    const match = content.match(/^---\n([\s\S]*?)\n---/);
+    const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!match) return {};
 
     const frontmatter: any = {};
-    const lines = match[1].split("\n");
+    const lines = match[1].split(/\r?\n/);
 
     lines.forEach((line) => {
       const [key, ...valueParts] = line.split(":");
@@ -230,6 +231,8 @@ const BlogPost = () => {
               {post.content}
             </ReactMarkdown>
           </div>
+          
+          <GiscusComments />
         </article>
       </main>
       <Footer />

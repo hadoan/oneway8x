@@ -9,16 +9,22 @@ image: "/ess-react.png"
 
 # Streaming in NestJS and React: SSE & NDJSON the Easy Way
 
-Real-time UX doesn’t always require WebSockets. With HTTP streaming you can push partial data as it's ready—perfect for AI token streams, long-running jobs, logs, and live updates. In this guide, we’ll build **SSE** (Server-Sent Events) and **NDJSON** streams in **NestJS**, then consume them in **React**.
+In my experience scaling architectures as a CTO, real-time UX doesn’t always require heavy WebSockets. With HTTP streaming you can push partial data as it's ready—perfect for AI token streams, long-running jobs, logs, and live updates. In this guide, we’ll build **SSE** (Server-Sent Events) and **NDJSON** streams in **NestJS**, then consume them in **React**.
 
-## Why HTTP Streaming?
+### Key Takeaways
+- **SSE (Server-Sent Events)** is ideal for pushing simple, continuous updates from server to client with built-in auto-reconnect.
+- **NDJSON (Newline-Delimited JSON)** is perfect for streaming complex, chunked JSON data via native `fetch()` readers.
+- Both methods avoid the heavy infrastructure overhead and statefulness of WebSockets.
+- Properly configuring Nginx or Cloudflare to disable buffering is critical for HTTP streaming to work in production.
+
+## Why should you use HTTP Streaming over WebSockets?
 
 * **Low overhead**: No stateful WebSocket infra.
 * **Browser native**: `EventSource` for SSE, `fetch()` + streams for NDJSON.
 * **Progress-first UX**: Show results incrementally.
 * **Interop**: Works with most proxies/CDNs if configured not to buffer.
 
-## Prerequisites
+## What do you need before getting started?
 
 * Node 18+ and a NestJS project (`@nestjs/common`, `@nestjs/core`)
 * React 18+ app (Vite or CRA)
@@ -302,3 +308,14 @@ For many “real-time” features, **HTTP streaming is enough**—lighter than W
 * Add **auth**: signed cookies, JWT (bearer), or channel keys per route.
 
 Happy streaming! 🚀
+
+## Quick Answers
+
+### When should I use WebSockets instead of SSE?
+Use WebSockets when you need bi-directional communication (both client and server sending high-frequency messages, like multiplayer games or collaborative editors). Use SSE when the communication is primarily one-way (server to client), such as live feeds or AI token streaming.
+
+### Can I stream data through Cloudflare or Nginx?
+Yes, but you must explicitly configure your reverse proxy or CDN to disable response buffering on your streaming routes (`proxy_buffering off` in Nginx). You should also consider increasing idle timeouts to prevent dropped connections.
+
+### What is the difference between SSE and NDJSON?
+SSE uses the browser's native `EventSource` API which automatically handles reconnections, but is generally limited to GET requests without custom headers. NDJSON uses the standard `fetch()` API with a `ReadableStream` decoder, giving you full control over HTTP methods (like POST) and custom headers.

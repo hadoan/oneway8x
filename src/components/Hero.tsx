@@ -14,52 +14,65 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <div className="inline-block mb-4 px-3 py-1.5 md:px-4 md:py-2 bg-primary/10 rounded-full">
             <span className="text-xs md:text-sm font-medium text-primary">
-              Available for Freelance Projects
+              Available for selected freelance, advisory, and AI MVP projects
             </span>
           </div>
           
-          <h1 className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Experienced Freelancer & Indie Hacker
+          <h1 className="mb-4 md:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+            I build AI products and<br className="hidden md:block" /> scalable software systems.
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-3 md:mb-4 leading-relaxed px-4">
-            Building Scalable Cloud Applications & AI-Driven Solutions
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
+            I’m Ha Doan, a Berlin-based founder-engineer and former CTO. I help startups and teams turn ideas into working products — from MVP to production.
           </p>
-          
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            With extensive experience as a full-stack developer, I specialize in turning ideas into scalable, 
-            market-ready products. I have a strong background in cloud-native development, LLMs, k8s, databases, 
-            and a variety of technologies including C#, Node.js, Next.js, React.js, Angular, microservices, and Docker.
-          </p>
-          
-          {/* Free Consultation Banner */}
-          <div className="mb-6 md:mb-8 p-4 md:p-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-2 border-primary/30 rounded-xl backdrop-blur-sm mx-4 relative z-20">
-            <p className="text-base md:text-lg font-semibold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              🎁 Limited Time Offer
-            </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="https://app.workramen.com/hadoan-xyz/30min?duration=30"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-elegant hover:shadow-xl h-11 px-8 w-full sm:w-auto group cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm md:text-base font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 w-full sm:w-auto shadow-md"
             >
-              Get Free 30 Minutes Tech Consultation
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              Book a 30-min intro
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+            <a
+              href="#works"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm md:text-base font-medium transition-colors border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 w-full sm:w-auto"
+            >
+              View selected work
             </a>
           </div>
           
-          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border/50">
-            <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Tech Stacks</p>
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
-              {["React", "Node.js", "TypeScript", "Docker", "K8s", "AWS", "Next.js", "Angular", ".NET", "PostgreSQL", "Python", "FastAPI", "NestJS", "LangChain", "LangGraph", "Pinecone"].map((tech) => (
-                <span 
-                  key={tech}
-                  className="px-3 py-1.5 md:px-4 md:py-2 bg-card border border-border rounded-lg text-xs md:text-sm font-medium hover:border-primary/50 transition-colors cursor-default"
-                >
-                  {tech}
-                </span>
-              ))}
+          {/* Cleaner CTA Card */}
+          <div className="max-w-2xl mx-auto p-6 md:p-8 bg-card border border-border rounded-2xl shadow-sm text-left flex flex-col md:flex-row items-center justify-between gap-6 mb-8 md:mb-10">
+            <div>
+              <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">Available for selected projects</p>
+              <h3 className="text-lg md:text-xl font-medium text-foreground">
+                Book a 30-minute intro to discuss your product, MVP, or technical direction.
+              </h3>
             </div>
+            <a
+              href="https://app.workramen.com/hadoan-xyz/30min?duration=30"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-6 whitespace-nowrap"
+            >
+              Book a 30-min intro
+            </a>
+          </div>
+
+          {/* Credibility Row */}
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground font-medium">
+            <span>Former CTO</span>
+            <span className="hidden sm:inline">•</span>
+            <span>AI product builder</span>
+            <span className="hidden sm:inline">•</span>
+            <span>Berlin-based</span>
+            <span className="hidden sm:inline">•</span>
+            <span>200k+ users scaled</span>
+            <span className="hidden sm:inline">•</span>
+            <span>Europe & Asia startup experience</span>
           </div>
         </div>
       </div>

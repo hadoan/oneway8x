@@ -5,10 +5,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Works", href: "#works" },
-    { name: "Clients", href: "#clients" },
-    { name: "Blog", href: "#blog" },
+    { name: "Work", href: "/#works" },
+    { name: "Services", href: "/#services" },
+    { name: "Writing", href: "/writing" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -16,11 +17,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">OW</span>
-            </div>
-            <span className="font-bold text-lg">oneway8x.com</span>
+          <a href="/#home" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
+            <img src="/logo.svg" alt="Oneway8X Logo" className="w-8 h-8 rounded-lg shadow-sm" />
+            <span className="font-bold text-xl tracking-tight hidden sm:inline-block">oneway8x.com</span>
           </a>
 
           {/* Desktop Navigation */}

@@ -9,7 +9,13 @@ image: "/claude-agent.webp"
 
 # Build a Beginner-Friendly Email Agent with Claude Agent SDK in TypeScript
 
-AI agents are great at dealing with repetitive, text-heavy workflows — and email is the perfect example. In this guide, you’ll build a **beginner-friendly email agent** using the **Claude Agent SDK in TypeScript**.
+In my experience building AI products, agents are uniquely good at dealing with repetitive, text-heavy workflows — and email is the perfect example. In this guide, you’ll build a **beginner-friendly email agent** using the **Claude Agent SDK in TypeScript**.
+
+### Key Takeaways
+- **The Claude Agent SDK** provides a streamlined way to give LLMs access to custom tools (like reading or sending emails).
+- **In-Memory Stores** are a great way to prototype agents without dealing with complex OAuth or IMAP integrations immediately.
+- **MCP (Model Context Protocol)** servers bundle your tools together so the agent can securely discover and call them.
+- You can build a complete Reasoning + Acting loop in under 100 lines of TypeScript.
 
 We’ll keep it simple:
 
@@ -22,7 +28,7 @@ By the end, you’ll have a working email copilot that uses Claude to orchestrat
 
 ---
 
-## What We’re Going to Build
+## What will we build with the Claude Agent SDK?
 
 We’ll build a small Node/TypeScript app that:
 
@@ -47,7 +53,7 @@ Claude will:
 
 ---
 
-## Prerequisites
+## What do you need before getting started?
 
 To follow along, you’ll need:
 
@@ -68,7 +74,7 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 
 ---
 
-## Project Setup
+## How do you set up the TypeScript project?
 
 First, create a new project:
 
@@ -525,3 +531,14 @@ From here, the path to a production-grade email copilot is:
 Happy building — and enjoy offloading your inbox to an AI agent. 🚀
 
 source code: https://github.com/hadoan/letscode/tree/main/anthropic-agent-sdk
+
+## Quick Answers
+
+### What is the Claude Agent SDK?
+The Claude Agent SDK is a toolkit provided by Anthropic that makes it easy to build agents in TypeScript and Python. It handles the complexities of tool calling, streaming, and orchestrating the reasoning loop (ReAct) under the hood.
+
+### Do I need a real email account to build an email agent?
+No, for prototyping and development, it is highly recommended to use a fake in-memory datastore (like we did in this guide) to prevent the AI from accidentally sending test emails to real clients. Once the agent behaves predictably, you can swap the in-memory functions for real Gmail/IMAP API calls.
+
+### What is an MCP Server?
+MCP stands for Model Context Protocol. It is an open standard that allows you to package tools and data sources into a standardized server format. The Claude Agent SDK uses local MCP servers to expose your custom tools (like `send_email`) to the AI model securely.
